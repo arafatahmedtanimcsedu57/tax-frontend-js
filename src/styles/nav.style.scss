@@ -1,0 +1,136 @@
+.nav {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    position: fixed;
+    left: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    width: 152px;
+    height: 100vh;
+
+    // padding: 32px;
+
+    border-right: 1px solid #f2f2f2;
+
+    &__items {
+        padding: 32px;
+
+        .brand-logo-container {
+            padding-bottom: 32px;
+            border-bottom: 1px solid #f2f2f2;
+
+            img {
+                width: 100px;
+            }
+        }
+
+        .link-container {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+
+            img {
+                margin-bottom: 8px;
+            }
+
+            .link-text {
+                color: #7D7D9C;
+                font-family: 'Poppins', sans-serif;
+                font-size: 12px;
+                letter-spacing: 0;
+                line-height: 16px;
+                text-align: center;
+                font-weight: 500;
+            }
+
+            &--active {
+                .link-text {
+                    color: #00B1EB;
+                }
+
+            }
+        }
+
+    }
+
+    .user-actions {
+        position: relative;
+        padding: 32px 0px 96px 20px;
+
+        display: flex;
+        flex-direction: row;
+        // align-items: center;
+        justify-content: space-between;
+
+        .user-info {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 500;
+            color: #0c2869;
+
+            height: 48px;
+            min-width: 48px;
+            border-radius: 48px;
+            background-color: rgba(0, 176, 235, 0.425);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0px 8px 0px 32px;
+        }
+
+        .actions {
+            position: fixed;
+            // right: 10%;
+            // // right: 15px;
+            transform: translateX(110%);
+
+            z-index: 10;
+            padding: 14px 32px;
+
+            border-radius: 12px;
+            background-color: #FFFFFF;
+
+            box-shadow: 0 4px 8px 4px rgba(0, 79, 159, 0.08);
+
+            .link-container {
+                // margin-top: 32px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: none;
+
+                img {
+                    margin-bottom: 8px;
+                }
+
+                .link-text {
+                    color: #7D7D9C;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 12px;
+                    letter-spacing: 0;
+                    line-height: 16px;
+                    text-align: center;
+                    font-weight: 500;
+                }
+
+                &--active {
+                    .link-text {
+                        color: #00B1EB;
+                    }
+
+                }
+            }
+        }
+    }
+}
