@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux'
-import quizReducer from './quiz.reducer'
+
+import taxPayerReducer from './taxPayer.reducer'
 import authReducer from './auth.reducer'
 
 export default combineReducers({
-    quiz: quizReducer,
+    tax_payer: taxPayerReducer,
     auth: authReducer
 });
