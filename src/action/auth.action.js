@@ -8,6 +8,11 @@ export async function loginUser(dispatch, loginPayload) {
     try {
         const response = await axios.post(`${ROOT_URL}/auth/login`, {
             ...loginPayload
+
+        }, {
+            withCredentials: true,
+            xsrfCookieName: 'csrftoken_testtest',
+            xsrfHeaderName: 'X-CSRFToken',
         })
         const data = await response.data;
 
