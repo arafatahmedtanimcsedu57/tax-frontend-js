@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-axios.defaults.withCredentials=true;
 const ROOT_URL = 'http://localhost:3333'
 
 export async function loginUser(dispatch, loginPayload) {
@@ -10,7 +9,6 @@ export async function loginUser(dispatch, loginPayload) {
         const response = await axios.post(`${ROOT_URL}/auth/login`, {
             ...loginPayload
         })
-        console.log(response)
         const data = await response.data;
 
         dispatch({ type: 'LOGIN_SUCCESS', payload: data });

@@ -1,5 +1,5 @@
 import axios from 'axios';
-axios.defaults.withCredentials=true;
+
 const ROOT_URL = 'http://localhost:3333'
 
 export async function getTaxPayers(dispatch) {
