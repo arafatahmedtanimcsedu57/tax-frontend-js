@@ -17,9 +17,9 @@ import {
 } from './types.js'
 
 const initialState = {
-    tax_payers: null,
+    tax_payers: [],
     loading: false,
-    mag: null,
+    msg: null,
     error: null
 }
 
@@ -33,7 +33,7 @@ function taxPayerReducer(state = initialState, action) {
         case GET_TAX_PAYER_SUCCESS:
             return {
                 ...state,
-                tax_payers: action.payload.tax_payers,
+                tax_payers: action.payload,
                 loading: false
             }
         case GET_TAX_PAYER_FAILED:
@@ -46,13 +46,15 @@ function taxPayerReducer(state = initialState, action) {
         case ADD_TAX_PAYER:
             return {
                 ...state,
-                loading: true
+                loading: true,
+                error: false,
+                msg: null
             }
 
         case ADD_TAX_PAYER_SUCCESS:
             return {
                 ...state,
-                tax_payers: state.tax_payers.push(action.payload.tax_payer),
+                tax_payers: [action.payload].concat(state.tax_payers),
                 loading: false
             }
         case ADD_TAX_PAYER_FAILED:
@@ -90,8 +92,9 @@ function taxPayerReducer(state = initialState, action) {
         case DELETE_TAX_PAYER_SUCCESS:
             return {
                 ...state,
-                tax_payers: state.tax_payers,// need to update
-                loading: false
+                loading: false,
+                tax_payers: state.tax_payers.filter(tax_payer => tax_payer.new_tin !== action.payload),
+                error: false
             }
         case DELETE_TAX_PAYER_FAILED:
             return {

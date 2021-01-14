@@ -1,0 +1,60 @@
+.card-header {
+  padding: 32px;
+}
+
+.card-header button {
+  position: fixed;
+  right: 32px;
+  font-size: 24px;
+}
+
+.popover {
+  left: -42px !important;
+}
+
+table {
+  padding: 8px;
+}
+
+table thead tr th {
+  padding: 8px;
+  color: #0a0809;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400 !important;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-align: right;
+}
+
+table tbody tr td {
+  padding: 8px;
+  color: #8383af;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 300 !important;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-align: right;
+}
+
+.rules {
+  padding: 32px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rules .rule {
+  background: rgba(255, 166, 0, 0.1);
+  margin-right: 16px;
+  padding: 4px 16px;
+  border-radius: 16px;
+  color: #ff8901;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+/*# sourceMappingURL=editableGrid.style.css.map */

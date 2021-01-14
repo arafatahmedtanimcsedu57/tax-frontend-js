@@ -4,6 +4,6 @@ import taxPayerReducer from './taxPayer.reducer'
 import authReducer from './auth.reducer'
 
 export default combineReducers({
-    tax_payer: taxPayerReducer,
+    tax_payers: taxPayerReducer,
     auth: authReducer
 });
